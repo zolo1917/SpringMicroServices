@@ -15,6 +15,6 @@ public class LimitServiceRestController {
 
 	@GetMapping("/limitConfiguration")
 	public LimitConfiguration limitconfig() {
-		return new LimitConfiguration(2, 22);
+		return new LimitConfiguration(config.getMaxium(), config.getMinium());
 	}
 }
