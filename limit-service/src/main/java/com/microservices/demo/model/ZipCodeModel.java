@@ -1,16 +1,9 @@
 package com.microservices.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Entity
-@Table(name="zip_city_state")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class ZipCodeModel {
-	@Id
 	private Long zip;
 	private String city;
 	private String stateId;
