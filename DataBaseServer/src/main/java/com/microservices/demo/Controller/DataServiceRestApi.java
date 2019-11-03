@@ -1,5 +1,7 @@
 package com.microservices.demo.Controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.core.env.Environment;
@@ -35,9 +37,8 @@ public class DataServiceRestApi {
 	}
 	
 	@GetMapping("/getCityState/{zip}")
-	public ZipCodeModel retriveZipCode(@PathVariable Long zip) {
-//		ZipCodeModel zipCodeModel = this.restTemplate.getForObject("http://localhost:8000/zipCodeModel/{personId}", ZipCodeModel.class, zip);
-		return zipRepo.getOne(zip);
+	public Optional<ZipCodeModel> retriveZipCode(@PathVariable Long zip) {
+		return zipRepo.findById(zip);
 	}
 
 }

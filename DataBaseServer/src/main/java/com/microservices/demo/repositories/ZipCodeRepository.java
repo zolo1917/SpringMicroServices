@@ -1,8 +1,8 @@
 package com.microservices.demo.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.microservices.demo.model.ZipCodeModel;
 
-public interface ZipCodeRepository extends JpaRepository<ZipCodeModel, Long>{
+public interface ZipCodeRepository extends CrudRepository<ZipCodeModel, Long> {
 }

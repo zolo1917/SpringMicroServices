@@ -25,6 +25,10 @@ public class ZipCodeModel {
 		this.countyName=countyName;
 	}
 	
+	public ZipCodeModel() {
+		super();
+	}
+	
 	public Long getZip() {
 		return zip;
 	}
